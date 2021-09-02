@@ -3,7 +3,7 @@
 
 const searchFood = async () => { 
 
-
+document.getElementById("loading").style.display = "block"
   const searchField = document.getElementById("search-field");
   const searchText = searchField.value;
 
@@ -14,7 +14,7 @@ if (searchText == "") {
 
   document.getElementById("search-result").textContent = " ";
 
-  
+  document.getElementById("loading").style.display = "none"
 }
 
 else {
@@ -56,6 +56,8 @@ if (meals==null) {
  document.getElementById("search-result").textContent = ""
  document.getElementById("meal-details").textContent = ""
  resultContainer.appendChild(div)
+
+
   
 }
 
@@ -78,6 +80,8 @@ else {
         
     
       resultContainer.appendChild(div);
+
+      document.getElementById("loading").style.display = "none"
     });
 }
 
