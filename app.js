@@ -10,9 +10,11 @@ const searchFood = async () => {
   // console.log(searchText);
 if (searchText == "") {
 
+  document.getElementById("meal-details").textContent = ""
+
   document.getElementById("search-result").textContent = " ";
 
-  document.getElementById("meal-details").textContent = ""
+  
 }
 
 else {
